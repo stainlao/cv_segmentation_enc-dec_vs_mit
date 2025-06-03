@@ -22,8 +22,16 @@ SegFormer использует Hierarchical Transformer Encoder, в которо
 Такая архитектура позволяет в 23 раза снизить количество обучаемых параметров, а значит и утилизируемой памяти gpu, но всего в 2 раза, т.к. в памяти gpu хранятся и состояния оптимизаторов, и тензоры входных данных, прочий кэш.
 
 Благодаря оптимизациям SegFormer и учится быстрее, примерно в 3 раза.
+![experiment 2](https://github.com/stainlao/cv_segmentation_enc-dec_vs_mit/blob/main/sources/SegFormer_epoch_10_prediction.png)
+
+
+![experiment 2](https://github.com/stainlao/cv_segmentation_enc-dec_vs_mit/blob/main/sources/Pretrained%20U-Net%20(ResNet50)_epoch_10_prediction.png)
 
 По метрикам тоже побеждает SegFormer, 0.42 vs 0.14 mIoU. Однако, в рамках ограниченного компьюта мы учим модели не долго(всего 10 эпох). Дополнительно (эксперимент 2) я учил u-net 30 эпох и получил mIoU 0.3276, что соответствует результатам 6й эпохи обучения SegFormer.
+![experiment 2](https://github.com/stainlao/cv_segmentation_enc-dec_vs_mit/blob/main/sources/comprehensive_model_comparison.png)
+
+![experiment 2](https://github.com/stainlao/cv_segmentation_enc-dec_vs_mit/blob/main/sources/Pretrained%20U-Net%20(ResNet50)_epoch_30_prediction.png)
+
 
 Что еще хотелось бы сделать: поучить обе модели до переобучения, сравнить метрики, какой максимальный mIoU удастся выжать из каждой из них. Однако для сравнения максимального качества моделей нужно перебирать кучу гиперпараметров, экспериментировать с разными оптимизаторами, что долго.
 
