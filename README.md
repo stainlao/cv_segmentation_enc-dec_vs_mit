@@ -13,7 +13,7 @@
 
 Обучаемые параметры: 3,719,541
 
-![experiment 2](https://https://github.com/stainlao/cv_segmentation_enc-dec_vs_mit/blob/master/comprehensive_model_comparison (1).png)
+![experiment 1]([https://https://github.com/stainlao/cv_segmentation_enc-dec_vs_mit/blob/master/comprehensive_model_comparison (1).png](https://github.com/stainlao/cv_segmentation_enc-dec_vs_mit/blob/main/sources/comprehensive_model_comparison%20(1).png))
 
 SegFormer использует Hierarchical Transformer Encoder, в котором self-attention помогает объединять информацию на разных уровнях обработки. Благодаря этому модель учитывает глобальный контекст фотографии. Кроме того, вместо глобального attention как в обычных ViT используется локальный, который оптимизирует количество обучаемых параметров и скорость вычислений.
 
